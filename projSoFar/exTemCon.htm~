@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>EXampt Tem Con</title>
+  <script type="text/javascript">
+  function convertToCentigrade(degFahren)
+  {
+    var degCent = 5 / 9 * (degFahren - 32);
+    return degCent;
+  }
+
+  function btnToCent_onclick()
+  {
+    var calcBox = document.form1.txtCalcBox;
+ 
+    if (isNaN(calcBox.value) == true || calcBox.value == "")
+    {
+	calcBox.value = convertToCentigrade(calcBox.value);
+    }
+  }
+  </script>
+</head>
+<body> 
+  <form action="" name="form1">
+    <p> 
+	<input type="text" name="txtCalcBox" value="0.0" />
+    </p>
+    <input type="button" value="Convert to centirade" 
+	name="btnToCent" onclick="btnToCent_onclick()" />
+  </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>EX 2 Page d</title>
+  <script type="text/javascript">
+  function btnShowVisited_onclick()
+  {
+    document.form1.txtaPagesVisited.value = window.parent.returnPagesVisited();
+  }
+  </script>
+</head>
+<body onload="window.parent.addPage(window.location.href)">
+  <h2> This is Page D</h2>
+  <p>
+    <a href="ch08_ex2_a.htm">Page A</a>
+    <a href="ch08_ex2_b.htm">Page B</a>
+    <a href="ch08_ex2_c.htm">Page C</a>
+    <a href="ch08_ex2_d.htm">Page D</a>
+  <p>
+<form name="form1" action="">
+  <textarea rows="10" cols="35" name="txtaPagesVisited"></textarea>
+  <br />
+  <input type="button" value="List Pages Visited" name="btnShowVisited"
+	onlick="btnShowVisited_onclick()" />
+</form>
+</body>
+</html>
+

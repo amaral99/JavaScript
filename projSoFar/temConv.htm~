@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<body>
+  <script type="text/javascript"> // Equation
+    //is C = 5/9 (F - 32).  
+    //9 / 5 * degCent = 32
+    var degCent = prompt("enter deg in Centegrade", 100);
+    var degfeh;
+
+    degfeh = 9 /5  * degCent + 32;
+    alert(degCent + "\xB0 Centigrade is " + parseInt(degfeh) + "\xB0 Ferenhight");
+
+    if (degCent < 0)
+	{document.write("That's below the freexzing point of water")};
+  </script>
+
+</body>
+</html>

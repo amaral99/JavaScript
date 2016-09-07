@@ -1,0 +1,50 @@
+<html>
+
+<body>
+<script type="text/javascript">
+
+var greeting;
+
+var nowDate = new Date();
+var nowHour = nowDate.getHours();
+var nowMinute = nowDate.getMinutes();
+var nowSecond = nowDate.getSeconds();
+
+if (nowMinute < 10)
+{
+  nowMinute = "0" + nowMinute;
+}
+
+if (nowSecond < 10)
+{
+  nowSecond = "0" + nowSecond;
+}
+
+if (nowHour < 12)
+{ 
+  greeting = "Good Morning";
+}
+else if (nowHour < 17)
+{
+  greeting = "Good Afternoon";
+}
+else 
+{
+  greeting = "Good Evening";
+}
+  document.write("<h4>" + greeting + " and welcome to my website</h4>")
+document.write("According to you clock the time is ");
+document.write(nowHour +  ":" + nowMinute + ":" + nowSecond);
+
+//setting date time
+var nowDate2 = new Date();
+nowDate2.setHours(9);
+nowDate2.setMinutes(57);
+alert(nowDate2);
+
+nowDate2.setMinutes(64);
+alert(nowDate2);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head>
+  <title>Dogs Breed</title>
+  <script type="text/javascript">
+  	function createDocument()
+	{
+	  var xmlDoc;
+	  
+	  if (window.ActiveXObject)
+	  {
+	  	var versions = 
+		[
+		  "Msxml2.DOMDocument.6.0",
+		  "Msxml2.DOMDocument.3.0"
+		];
+
+		for (var i = 0; i < versions.length; i++)
+		{
+		  try
+		  {
+			xmlDoc = new ActiveXObject(versions[i]);
+			return xmlDoc;
+		  }
+		  catch (error)
+		  {
+			//do nothing here
+		  }
+		}
+	  }
+	  else if (document.implementation && document.implementation.createDocument)
+	  {
+		xmlDoc = document.implementation.createDocument("","",null);
+		return xmlDoc;
+	  }
+
+	  return null;
+	}
+
+  	var xmlDocument = createDocument();
+  	xmlDocument.load("ch12_examp11.xml");
+
+	function displayDogs()
+	{
+	  var dogNodes = xmlDocument.getElementsByTagName("dog");
+
+	  var table = document.createElement("table");
+	  table.setAttribute("cellPadding", 10); //give the tbl padding
+	  table.setAttribute("width", "100%");
+	  table.setAttribute("border", "1");
+
+	  var tableHeader = document.createElement("thead");
+	  var tableRow = document.createElement("tr");
+
+	  for (var i = 0; i < dogNodes[0].childNodes.length; i++)
+	  {
+		var currentNode = dogNodes[0].childNodes[i];
+
+		if (currentNode.nodeType == 1)
+		{
+		  var tableHeaderCell = document.createElement("th");
+		  var textData = document.createTextNode(currentNode.nodeName);
+		  tableHeaderCell.appendChild(textData);
+		  tableRow.appendChild(tableHeaderCell);
+		}
+	  }
+
+	  tableHeader.appendChild(tableRow);
+	  table.appendChild(tableHeader);
+	  var tableBody = document.createElement("tbody");
+
+	  for (var i = 0; i < dogNodes.length; i++)
+	  {
+		var tableRow = document.createElement("tr");
+		
+		for (var j = 0; j < dogNodes[i].childNodes.length; j++)
+		{
+		  var currentNode = dogNodes[i].childNodes[j];
+		  if (currentNode.nodeType == 1)
+		  {
+			var tableDataCell = document.createElement("td");
+			var textData = document.createTextNode
+			(
+			  currentNode.firstChild.nodeValue
+			);
+
+			tableDataCell.appendChild(textData);
+			tableRow.appendChild(tableDataCell);
+		   }
+		}
+		tableBody.appendChild(tableRow);
+	  }
+	  table.appendChild(tableBody);
+	  document.body.appendChild(table);
+	}
+	</script>
+</head>
+<body>
+  <a href="javascript: displayDogs();">Display Dogs</a>
+</body>
+</html>

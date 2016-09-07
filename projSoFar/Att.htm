@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Playing iwth Attributes</title>
+</head>
+<body>
+  <p id="paragraph1">This is some text.</p>
+  <script type="text/javascript">
+	var pElement = document.getElementById("paragraph1");
+	pElement.setAttribute("align", "center");
+	
+	alert(pElement.getAttribute("align"));
+
+ 	pElement.removeAttribute("align");
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>DATES IN FUT</title>
+  </head>
+<script type="text/javascript">
+
+var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+var nowDate = new Date();
+
+nowDate.setMonth(nowDate.getMonth() + 12);
+
+document.write(nowDate + "<br /n>");
+document.write(Date() + "<br /n>");
+document.write(months[nowDate.getMonth()] + " " + nowDate.getFullYear());
+
+var date = new Date();
+document.write("<br /n>" + date)
+
+
+</script>
+</html>

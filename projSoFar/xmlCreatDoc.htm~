@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Message of the day</title>
+  <script type="text/javascript">
+  function createDocument()
+  {
+	var xmlDoc;
+
+	if (window.ActiveXObject)
+	{
+	  var versions =
+	  [
+		"Msxml2.DOMDocument.6.0",
+		"Msxml2.DOMDocument.3.0"
+	  ];
+
+	  for (var i = 0; i < versions.length; i++)
+	  {
+		try
+		{
+		  xmlDoc = new ActivexObject(version[i]);
+		  return xmlDoc;
+		}
+		catch (error)
+		{
+		  //do nothing here
+		}
+	  }
+ 	}
+	else if (document.implementation && document.implementation.createDocument)
+ 	{
+	  xmlDoc = document.implementation.createDocument("","",null);
+	  return xmlDoc;
+	}
+
+	return null;
+  }
+  
+  function getDailyMessage()
+  {
+	var messages = xmlDoc.getElementsByTagName("daily");
+	var dateobj = new Date();
+	var today = dateobj.getDay();
+
+	return messages[today].firstChild.nodeValue;
+  }
+</script>
+</head>
+

@@ -1,0 +1,23 @@
+<table>
+  <thead>
+	<tr>
+	  <td>Car</td>
+	  <td>Top Speed</td>
+	  <td>Price</td>
+	</tr>
+  </thead>
+  <tbody>
+	<tr>
+	  <td>Chevrolet</td>
+	  <td>120mph</td>
+	  <td>$10,000</td>
+	</tr>
+	<tr>
+	  <td>Potiac</td>
+	  <td>140mph</td>
+	  <td>$20,000</td>
+	</tr>
+  </tbody>
+</table>
+
+

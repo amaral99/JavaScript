@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Cars Table</title>
+  <script type="text/javascript">
+  function createDocument()
+  {
+    var xmlDoc = document.implementation.createDocument("","",null);
+    return xmlDoc;
+  }
+
+  var xmlDocument = createDocument();
+  xmlDocument.load("cars.xml");
+
+  function displayCars()
+  {
+   	var carNodes = xmlDocument.getElementsByTagName("Car");
+	
+	var table = document.createElement("table");
+	table.setAttribute("cellPadding", 5);
+	table.setAttribute("width", "100%");
+	table.setAttribute("border", "1");

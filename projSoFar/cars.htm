@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Cars Table</title>
+  <script type="text/javascript">
+  function createDocument()
+  {
+    var xmlDoc = document.implementation.createDocument("","",null);
+    return xmlDoc;
+  }
+
+  var xmlDocument = createDocument();
+  xmlDocument.load("cars.xml");
+
+  function displayCars()
+  {
+   	var carNodes = xmlDocument.getElementsByTagName("Car");
+	
+	var table = document.createElement("table");
+	table.setAttribute("cellPadding", 5);
+	table.setAttribute("width", "100%");
+	table.setAttribute("border", "1");
+
+	var tableHeader = document.createElement("thead");
+	var tableRow = document.createElement("tr");
+
+	for (var i = 0; i < carNodes[0].childNodes.length; i++)
+	{
+	  var currentNode = carNodes[0].childNodes[i];
+	  
+	  if (currentNode.nodeType == 1)
+	  {
+		var tableHeaderCell = document.createElement("th");
+		var textData = document.createTextNode(currentNode.nodeName);
+		tableHeaderCell.appendChild(textData);
+		tableRow.appendChild(tableHeaderCell);
+	  }
+    }
+
+	tableHeader.appendChild(tableRow);
+	table.appendChild(tableHeader);
+	var tableBody = document.createElement("tbody");
+

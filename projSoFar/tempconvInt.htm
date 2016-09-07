@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title> Temp Convert</title>
+  <script type="text/javascript">
+  function convTem()
+  {
+    var feh = document.form1.feh.value;
+    var cel  = document.form1.cel.value;
+    var con ;
+   
+    var degFeh = 9 / 5 * cel + 32;
+    var degCel = 5 / 9 * (feh - 32);
+    
+    document.form1.resFeh.value = degFeh; 
+    document.form1.resCel.value = degCel;
+  }
+</script>
+</head>
+  <form action="" name="form1">
+    <p>Enter Feh:
+      <input type="text" name="feh" value="" />
+    </p>
+    <p>Enter Cel:
+      <input type="text" name="cel" value="" />
+    </p>
+    <p>
+      <input type="button" name="convFeh" value="convert Feh" onclick="convTem()">
+      <input type="text" name="resFeh" value=""/>
+      <input type="button" name="convCel" value="convert Cel" onclick="convTem()">
+      <input type="text" name="resCel" value=""/>
+    </p>
+    
+    
+</body>
+

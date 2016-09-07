@@ -1,0 +1,29 @@
+<html>
+<script type="text/javascript">
+
+var numbers = new Array(1,2,3,4,5);
+
+function doubleAndAlert(value, index, array)
+{
+  var result = value * 2;
+  document.write(result + "<br /n>");
+}
+
+numbers.forEach(doubleAndAlert);
+
+//.map
+
+var numbers2 = new Array(1,2,3,4,5);
+
+function doubleAndAlert2(value, index, array)
+{
+  var result = value * 2;
+  return result;
+}
+
+var doubledNumbers = numbers2.map(doubleAndAlert2);
+document.write("The doubled numbers are: " + doubledNumbers);
+
+</script>
+</html>
+

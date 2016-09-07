@@ -1,0 +1,5 @@
+console.log (isNaN("34"));
+
+var myArray = new Array(6);
+
+console.log (myArray.length);

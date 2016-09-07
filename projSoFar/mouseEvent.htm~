@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Mouse Event</title>
+  <style type="text/css">
+  	.underline
+  	{
+	  color: red;
+	  text-decoration: underline;
+	}
+  </style>
+  <script type="text/javascript">
+	function handleEvent(e)
+	{
+	  if (e.target.tagName == "p")
+	  {
+		if (e.type == "mouseover")
+		{
+		  e.target.className = "underline";
+	  	}
+
+		if (e.type == "mouseout")
+		{
+		  e.target.className = "";
+		}
+	  }
+	  if (e.type == "click")
+	  {
+		alert("You clicked the mouse buttton at the X:" + e.clientX + " and Y:" + e.clientY + " coordinates");
+	  }
+	}
+	
+	document.onmouseover = handleEvent;
+	document.onmouseout = handleEvent;
+	document.onclick = handleEvent;
+	</script>
+  </head>
+  <body>
+ 	<p>This is paragraph 1</p>
+	<p> This is paragraph 2. </p>
+	<p> This is Paragraph 3. </p>
+  </body>
+</html>
+

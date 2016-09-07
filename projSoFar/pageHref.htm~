@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <script type="text/javaScript">
+  function displayLink()
+  {
+    var linksCounter;
+    for (linksCounter = 0; linksCounter < document.links.length; linksCounter++)
+    {
+      alert(document.links[linksCounter].href);
+    }
+  }
+
+  //window.document.links[0].onload
+</script>
+<body onload="displayLink()"> 
+   <a href="www.google.com" name="google"> This is google <br /n></a>
+   <a href="facebook.com" name="facebook"> the bookface <br /n></a>
+   <a href="youtube.com" name="youtube">youtube <br /n></a>
+</body>
+</html>
+

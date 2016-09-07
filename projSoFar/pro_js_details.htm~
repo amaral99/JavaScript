@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Professional JavaScript</title>
+</head>
+
+<body>
+  <h3>Professional JavaScript, 2nd Edition</h3>
+  <strong>Subjects</strong> <br />
+  ECMAScript<br />
+  Internet<br />
+  JavaScript
+  <br />
+  XML and Scripting<br />
+  <hr color="#cc3333" />
+  <p>
+    this book takes a comprehensive look at the javaScript language and prepares the reader in-depth knowlege of the languages.
+  </p>
+  <p>
+    It includes a guide to the language - when where and how to get te most out of javascript - together with practical case studies demonstrating javascript in action.  coverage is bang up-to-date, with discussion of compatability issues and version differences, and the book concludes with a comprehensive reference section. 
+  </p>
+</body>
+</html>
+

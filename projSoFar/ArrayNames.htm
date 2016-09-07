@@ -1,0 +1,21 @@
+<html>
+
+<script type="text/javascript">
+
+var inputName = "";
+var namesArray = new Array();
+
+while ( (inputName = prompt("enter a name", "")) != "")
+{
+  namesArray[namesArray.length] = inputName;
+}
+
+namesArray.sort();
+
+var namesList = namesArray.join("<br /n>")
+
+document.write(namesList);
+
+</script>
+<html>
+

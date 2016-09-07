@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+
+<script type="text/JavaScript">
+  var myListString = "Apple, 0.99, bananaa, 0.50, peach, 0.25, orange, 0.75";
+  var theRegExp = /[^a-z]+/i;
+  var myFruitArray = myListString.split(theRegExp);
+  document.write(myFruitArray.join("<br />"));
+
+</script>
+</body>
+</html>
+

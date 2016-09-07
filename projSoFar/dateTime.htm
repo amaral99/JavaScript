@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Chapter 5: ex5</title>
+</head>
+
+<script type="text/javascript">
+
+var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+var dateNow = new Date();
+var yearNow = dateNow.getFullYear();
+var monthNow = months[dateNow.getMonth()];
+var dayNow = dateNow.getDate();
+var daySuffix;
+
+switch (dayNow)
+{
+  case 1:
+  case 21:
+  case 31:
+    daySuffix = "st";
+    break;
+  case 2:
+  case 22:
+    daySuffix = "nd";
+    break;
+  case 3:
+  case 23:
+    daySuffix = "rd";
+    break;
+  default:
+    daySuffix = "th";
+    break;
+}
+
+document.write("It is the " + dayNow + daySuffix + " day ");
+document.write("in the month of " + monthNow);
+document.write(" in the year " + yearNow + "<br /n>");
+
+document.write(dayNow + " " + monthNow + " " + yearNow + "<br /n>");
+
+var myDate = new Date("1 Jan 2010");
+myDate.setDate(2);
+document.write(myDate + "<br /n>");
+
+var nowDate = new Date();
+var currentDay = nowDate.getDate();
+document.write(nowDate.setDate(currentDay + 28));
+
+</script>
+</body>
+</html>
+
+
+
+</script>
+</html>
